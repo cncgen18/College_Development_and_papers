@@ -1,0 +1,121 @@
+//Michael Weyman
+//Homework 2
+/*This is the main function. In this program we take in input files with certain cities, and statistics for that city.
+	When the input file is read the program then calculates which city is the most livable while printing the other cities into the console.
+	At the end of the program a summary prints out stating which city is the most livable.*/
+#include "city.h"	//header file reference
+void main(){
+	char name[] = "             ";		//holds the city name
+	char BName[] = "              ";	//holds the city with best livability score
+	double live = 0, BLive = 0;			//holds the livability score for the current and best city
+	int count = 0, test = 0;			//holds the count variable and the variable that exits the loop
+	int pop = 0,mile = 0,poll = 0,crime = 0,expense = 0,high = 0;		//variables for the city statistics
+	double pollr = 0,traffr = 0, crimer = 0, expenser = 0,popd = 0;		//variables for calculated statistics
+	FILE *fp;		//for input file
+	fp = fopen("city2.txt","r");		//open file
+	Header();	//header function call
+	while(test != -1){		//while loop for reading the input file, exits when file is over
+		count += 1;		//counting the number of cities in file
+		test = SetCity(fp, name, &pop, &mile, &poll, &crime, &expense, &high);		//sends pointers to be changed to current city
+		popd = PopDen(&pop,&mile);		//calculating the population density
+		GetRating(&pollr, &traffr, &crimer, &expenser, &popd, &poll, &crime, &expense, &high);		//calculates pollution rating, traffic rating etc.
+		live = Livability(&pollr,&traffr,&crimer,&expenser);		//calculates the livability score for current city
+		Printer(name,&popd,live);		//prints out current city, population density, and livability score
+		if( live > BLive){		//setting the besy city in a holder variable
+			BLive = live;
+			strcpy(BName,name);
+		}
+	}
+	Summary(count,BName,BLive);		//prints off ending statement for best city
+	fclose(fp);		//closes the document
+}
+
+//the header file for the program
+//include statements
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+//constants
+#define TRAFFIC 1.7			//for traffic function
+#define CRIME 872.6			//for crime function
+#define EXPENSE 1217.1		//for expense function
+#define LIVE 13.81			//for livability function
+//prototypes
+void Header();
+void Summary(int, char [], double);
+void Printer(char *, double *, double);
+double Livability(double *, double *, double *, double *);
+void GetRating(double *, double *, double *, double *, double *, int *, int *, int *, int *);
+double PopDen(int *, int *);
+int SetCity(FILE *,char [],int *,int *,int *,int *,int *,int *);
+
+/*This Funtion prints the city header into the console*/
+#include "city.h"
+void Header(){
+	printf("City		Population Dens.		Livability Score\n");
+}
+
+/*This function returns the city details from an external file*/
+#include "city.h"
+int SetCity(FILE *fp, char name[], int *pop, int *mile, int *poll, int *crime, int *expense, int *high){
+	//fscanf reads the input file and sets the row into seperate variables
+	fscanf(fp,"%s %d %d %d %d %d %d\n", name,pop,mile,poll,crime,expense,high);
+	//if statement for checking if the file is over
+	if(feof(fp)){
+		return -1; }
+}
+
+/*This function calculates population density*/
+#include "city.h"
+double PopDen(int *pop, int *sqm){
+	return (double)*pop / *sqm;
+}
+
+/*This function calculates pollution rating, traffic rating, crime per capita, and expense per capita*/
+#include "city.h"
+void GetRating(double *pollr, double *traffr, double *crimer, double *expenser,double *popd,int *poll, int *crime, int *expense, int *high){
+	//pollution rating
+	*pollr = (*poll * *popd)/ 1000;
+	//traffic rating
+	*traffr = (*popd * TRAFFIC)/ *high;
+	//crime per capita
+	*crimer = (*crime * *popd)/ CRIME;
+	//expence per capita
+	*expenser = (*expense * *popd)/ EXPENSE;
+}
+
+/*This function calculates a city's livability*/
+#include "city.h"
+double Livability(double *pollr, double *traffr, double *crimer, double *expenser){
+	return 100 - ((*pollr + *traffr + *crimer + *expenser)/LIVE);
+}
+
+/*This Funtion prints the city info into the console*/
+#include "city.h"
+void Printer(char name[], double *popd, double live){
+	printf("%-20s %-25.2f %10.2f\n", name,*popd,live);
+}
+
+/*This Funtion prints the summary into the console*/
+#include "city.h"
+void Summary(int count, char Bname[], double BLive){
+	//prints off the city with the best livability score
+	printf("\nOf the %i cities, the most liveable was %s with a score of %.2f\n", count, Bname, BLive);
+}
+
+OUTPUT:
+
+City            Population Dens.                Livability Score
+Atlanta              443.12                         55.02
+Boston               519.65                         34.87
+Cincinnati           276.13                         75.90
+Dallas               273.46                         76.58
+Las_Vegas            154.44                         84.91
+Los_Angeles          566.09                         17.72
+Minneapolis          323.74                         69.47
+New_York_City        829.75                          1.01
+Seattle              373.01                         56.78
+Washington_DC        493.87                         41.80
+
+Of the 10 cities, the most liveable was Las_Vegas with a score of 84.91
+Press any key to continue . . .

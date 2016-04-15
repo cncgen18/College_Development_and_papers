@@ -1,0 +1,120 @@
+//Michael Weyman
+// CSC 362
+/* This Program takes in a coded messages and decodes them. 
+After decoding them it puts the decoded message into a seperate output file.*/
+#include <stdio.h>
+#include <ctype.h>
+
+void main(){
+	char c;								// character for input document
+	char temp1;							// temp character for code
+	char temp2;							// temp character for code
+	int numbers = 0;					// counts number of digits in original message
+	int codedc = 0;						// counts number of codes
+	int newdoc = 0;						// counts number of digits in new document
+	int s;								// skipping value
+	double per = 0.0;					// percentage deleted value
+	FILE *fp1, *fp2;					// the input and output file
+	fp1 = fopen("input3.txt", "r");		// open and read input file
+	fp2 = fopen("output.txt", "w");		// open and write on output file
+	while((c=getc(fp1))!=-1) {			// while loop runs through the input document
+		numbers += 1;					// counts digits in file
+		if ( c == 'q' || c == 'Q' ){		// check for Q begining of code
+			temp1=getc(fp1);			// sets temp1 to char after c
+			numbers += 1;
+			if (isdigit(temp1)){			// checks if temp1 is a digit 0-9
+				s = (int)temp1 - 48;	// changes temp1 to int and sets to s
+				codedc += 1;			// counts codes in file
+				for(int i = 0; i < s; i++){		// for loop skipping
+				temp1=getc(fp1);		//skips the amount of spaces
+				numbers += 1;
+			}
+			}
+			else{
+				putc(c, fp2);			//adds code letter to output file if check fails
+				newdoc += 1;
+				putc(temp1, fp2);		//adds temp letter to output file if check fails
+				newdoc += 1;
+			}
+			
+		}
+		//this else if statement checks for z or x code letter
+		else if ( c == 'z' || c == 'Z' || c == 'x' || c == 'X' ){		
+			temp1=getc(fp1);			// sets temp1 to char after c
+			numbers += 1;
+			temp2=getc(fp1);			// sets temp1 to char after temp1
+			numbers += 1;
+			// if statement tests if temp1 is a punctuation and if temp2 is a digit
+			if (ispunct(temp1) && isdigit(temp2)){
+				s = (int)temp2 - 48;		//initiates ammount needed to be skipped
+				codedc += 1;
+				for(int i = 0; i < s; i++){
+				temp1=getc(fp1);
+				numbers += 1;
+			}
+			}
+			else{			//puts digits back into document if they werent codes
+				putc(c, fp2);
+				newdoc += 1;
+				putc(temp1, fp2);
+				newdoc += 1;
+				putc(temp2, fp2);
+				newdoc += 1;
+			}
+			
+		}
+		else{		//puts characters into the output document
+			putc(c, fp2);
+		    newdoc += 1;
+		}
+	}
+	fclose(fp1);		//closes the input and output files
+	fclose(fp2);
+	per = ((double)newdoc/numbers) * 100;			//calculates the percent of decrease from original to output
+	printf("Percentage decrease in file: %.2f%%\n", per);
+	printf("total number of codes: %i\n", codedc);
+}
+
+
+Output:
+
+The *2* brown COWS: jumped over the 1 silver mOOn!
+
+Gr8 scott that made ! sense 2 U, did it?
+
+No, of course ~.
+
+
+Percentage decrease in file: 62.92%
+total number of codes: 13
+
+Ich bin der Himmel,
+Ich bin das Wasser,
+Ich bin der Dreck unter deinen Walzen,
+Ich bin dein geheimer Schmutz,
+Und verlorenes Metallgeld,
+Ich bin deine Ritze,
+Ich bin deine Ritzxyund Schlitze.
+
+I am the clouds.
+I am embroidered.        
+
+Ich bin der Autor aller Felgen und Damask Paspeln,
+Ich bin der chrome dinette,
+Ich bin der chrome dinette,
+Ich bin Eier aller Arten.
+
+Ich bin alle Tage und Naechte,
+Ich bin alle Tage und Naechte,
+Ich bin alle Tage und Naechte,
+Ich bin alle Tage und Naechte.
+
+Ich bin hier,
+Und du bist mein Sofa.
+Ich bin hier,
+Und du bist mein Sofa.
+Ich bin hier,
+Und du bist mein Sofa!
+
+Percentage decrease in file: 77.62%
+total number of codes: 34

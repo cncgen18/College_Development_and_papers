@@ -1,0 +1,11 @@
+Michael Weyman
+
+	Based on my results The fastest type of code for the sort was the C++ array. The C++ array
+sorted in basically no time at all until it handled an array with 100000 numbers, and the average time with
+100000 numbers was 5.33 ms.
+
+	The array in java was quick, but not as quick as the C++ array. It sorted 10000 numbers in
+7.66 ms and 100000 numbers in 16.33 ms.
+
+	The C++ vector was faster than the java array until the 100000 number sort. The vector
+sorted 1000 numbers in 1.33 ms, 10000 numbers in 5.33 ms, and 100000 numbers in 51.66 ms
