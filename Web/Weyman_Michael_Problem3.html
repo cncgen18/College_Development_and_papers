@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Function use</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var cipher;
+  var add;
+  var multi;
+  var ans;
+  cipher = window.prompt("enter CIPHERTEXT", "value");
+  var split = cipher.split("");
+  add = window.prompt("enter additive key", "value");
+  multi = window.prompt("enter multiple key", "value");
+  multi = getInverse(multi)
+  ans = calculation(split , add, multi);
+  document.writeln("CIPHERTEXT = " + cipher);
+  document.writeln("plaintext = " + ans);
+  function calculation( split, add, multi){
+		for ( i = 0; i < split.length(); i++){
+			split[i] = ((split[i] * multi) % 26) + 97;
+		}
+		for ( j = 0; j < split.length(); j++){
+			split[i] = (((split[i]-65) - add)%26) + 97;
+		}
+		return split;
+     }
+  function getInverse(multi){
+	switch(multi){
+		case 1:
+			multi = 1;
+		break;
+		case 3:
+			multi = 9;
+		break;
+		case 5:
+			multi = 21;
+		break;
+		case 7:
+			multi = 15;
+		break;
+		case 9:
+			multi = 3;
+		break;
+		case 11:
+			multi = 19;
+		break;
+		case 15:
+			multi = 7;
+		break;
+		case 17:
+			multi = 23;
+		break;
+		case 19:
+			multi = 11;
+		break;
+		case 21:
+			multi = 5;
+		break;
+		case 23:
+			multi = 17;
+		break;
+		case 25:
+			multi = 25;
+		break;
+	}
+	return multi;
+		
+  }
+	
+  
+  </script>
+</body>
+</html>

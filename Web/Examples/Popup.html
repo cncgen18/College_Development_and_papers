@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>JavaScript Practice</title>
+<script type="text/javascript">
+<!-- 
+	function timeInfo() {
+		var months=new Array(13);
+		months[1]="January";
+		months[2]="February";
+		months[3]="March";
+		months[4]="April";
+		months[5]="May";
+		months[6]="June";
+		months[7]="July";
+		months[8]="August";
+		months[9]="September";
+		months[10]="October";
+		months[11]="November";
+		months[12]="December";
+		var time=new Date();
+		var lmonth=months[time.getMonth() + 1];
+		var date=time.getDate();
+		var year=time.getYear();
+		if (year < 2000)
+		year = year + 1900;
+		document.write("<p> "+ lmonth + " ");
+		document.write(date + ", " + year + "</p>");
+	}
+
+	function browserInfo() {
+		var browser=navigator.appName;
+		var b_version=navigator.appVersion;
+		var version=parseFloat(b_version);document.write("Browser name: "+ browser);
+		document.write("<br />");
+		document.write("Browser version: "+ version);
+	}
+
+	function popUp(URL) {
+		window.open(URL, 1, "toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=400,height=300");
+	}
+// -->
+</script>
+</head>
+<body>
+	<h2>Using JavaScript for Opening a Popup Window, Displaying Date, and Browser Info</h2>
+
+	<script type="text/javascript">
+	<!--  
+		timeInfo();
+		browserInfo();
+	//-->
+	</script>
+
+	<form>
+		<input type="button" value="Open the Popup Window" onClick="javascript:popUp('http://www.google.com')";>
+	</form>
+	
+
+</body>
+</html>

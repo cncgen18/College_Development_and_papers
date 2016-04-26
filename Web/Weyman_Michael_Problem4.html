@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>jump menu</title>
+  <script type="text/javascript">
+  alert("welcome to my webpage!!");
+  function jumpMenu(select){ 
+   var i = select.selectedIndex; 
+   var selection = select.options[i].value; 
+   var url; 
+   switch (i) {
+   case 0:
+     alert("Please select a website."); 
+   break;
+   case 1:   
+     url = "http://www.ign.com/"; location.href = url;
+     alert("Thank you for visiting!");	 
+   break;
+   case 2:
+     url = "http://www.facebook.com/"; location.href = url;
+	 alert("Thank you for visiting!");
+   case 3:
+     url = "http://www.g4tv.com/"; location.href = url; 
+     alert("Thank you for visiting!");	 
+    }	 
+ } 
+  </script>
+</head>
+<body>
+<h1>Jump menu</h1>
+<form> 
+<select name="Site"> 
+<option value="0">--SELECT A SITE--</option> 
+<option value="ign">IGN</option>
+ <option value="facebook">Facebook</option>
+ <option value="g4tv">G4TV</option>  
+</select> 
+<input type="button" value="GO" onclick="jumpMenu(this.form.Site);"> 
+</form> 
+</body>
+</html>

@@ -1,0 +1,36 @@
+     @charset "utf-8";
+
+    body {	background-color: #FDFDF0;
+			color: #0000FF;
+            font-family: Arial, Helvetica, sans-serif; }
+
+    h1 {  color: #000000;
+           font-family: Palatino, Times New Roman;
+     }
+	h2 { color: #FF0000;
+         font-style: italic; }
+    li { background-color:#FF0000;
+        color: #000000;
+        font-style:bold;		}
+    .navbar { margin: 15px;
+            display: block; }
+	#leftcolumn {float:left;
+               width: 100px;
+			   background-color: #CCCCCC;
+			   color: #FFFFFF; }
+	p { color: #000000;
+	   font-style: bold; }
+	.footer { font-size: xx-small;
+            background-color: #FFFFFF;
+            color: #000000;
+            text-align:center;
+			clear:right;
+			paddingbottom:20px; }
+	#rightcolumn { margin-left: 120px; 
+                 background-color: #FFFFFF;
+                 color: #000000; }
+	    
+     			
+
+
+

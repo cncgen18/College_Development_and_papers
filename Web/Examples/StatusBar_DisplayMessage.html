@@ -1,0 +1,38 @@
+﻿<html>
+<head>
+<title>JavaScript Unleashed</title>
+<script language= "JavaScript">
+<!--
+function statusMsg(msgType) {
+   var message = "";
+   if(msgType == "string") {
+      message = "string";
+   }
+   if(msgType == "integer") {
+      message = "integer";
+   }
+   else if(msgType == "dollar") {
+      message = "dollar and float";
+   }
+
+   else if(msgType == "credit") {
+      message = "credit number";
+   }
+   window.defaultStatus = message;
+   window.status = message;
+}
+//-->
+</script>
+</head>
+<body onFocus="statusMsg('')">
+<form name="form1" action="#" method="post">
+<br>First Name <input type="text" size=20 maxlength=20 name="Integer" onFocus="statusMsg('string')"><br>
+ Last Name <input type="text" size=20 maxlength=20 name="Integer" onFocus="statusMsg('string')"><br>
+Age <input type="text" size=5 maxlength=5 name="Integer" onFocus="statusMsg('integer')"><br>
+Amount <input type="text" size=6 maxlength=6 name="Dollar" onFocus="statusMsg('dollar')"><br>
+Card # <input type="text" size=16 maxlength=16 name="Credit" onFocus="statusMsg('credit')"><br>
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

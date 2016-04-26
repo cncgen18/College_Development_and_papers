@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Chip Sales</title>
+  <style type="text/css">
+  h1 { color: #FF0000;
+  }
+  body { background-color: #cccccc;
+         color: #0000FF;
+  }
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    var ques;
+	var name;
+	var address;
+	var phone;
+	var email;
+	var chips;
+	var discount;
+	var total;
+	var saved;
+	var after;
+    ques = window.confirm("would you like to continue?");
+	if (ques == true) {
+	 name = window.prompt("Enter Name");
+	 address = window.prompt("Enter address");
+	 phone = window.prompt("Phone Number");
+	 email = window.prompt("Enter Email");
+	 chips = window.prompt("Number of chips bought");
+	 if (chips <= 19){
+	   discount = 0;
+	 }
+	 if( chips > 19 && chips <= 49){
+	  discount = .02;
+	  }
+	 if ( chips > 49 && chips <= 79){
+	   discount = .04;
+	 }
+	 if ( chips > 79 && chips <= 99){
+	   discount = .06;
+	 }
+	 if ( chips > 99 ){
+	   discount = .08;
+	 }
+	 document.writeln("<h1>Information:</h1>");
+	 document.writeln("</br>Name: " + name);
+	 document.writeln("</br>Address: " + address);
+	 document.writeln("</br>Phone: " + phone);
+	 document.writeln("</br>Email: " + email);
+	 total = 110 * chips;
+	 saved = total * discount;
+	 after = total - saved;
+	 document.writeln("</br><h1>Order Information:</h1>");
+	 document.writeln("</br>Number of chips bought: " + chips);
+	 document.writeln("</br>Cost per unit: $110");
+	 document.writeln("</br>Total Cost before discount: " + total);
+	 document.writeln("</br>Discount percentage/amount: " + (discount * 100) + "% / " + saved);
+	 document.writeln("</br>Total cost after discount: " + after);
+	 }
+	if (ques == false) {
+	  document.writeln("<h1> Thank you for your time! </h1>");
+	  }
+  </script>
+</body>
+</html>

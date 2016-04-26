@@ -1,0 +1,38 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+	<title>String Processing </title>
+	<script type = "text/javascript">
+	<!--
+		var anchorText = "This is an anchor";
+		document.writeln("<p>" + anchorText.anchor( "top" ) + "</p>");
+
+		var s = "ZEBRA";
+		var s2 = "AbCdEfG";
+		document.writeln( "<p>Character at index 0 in '" + 
+		s + "' is " + s.charAt( 0 ) );
+		document.writeln( "<p>'" + s2 + "' in lowercase is '" +
+		s2.toLowerCase() + "'" );       
+		document.writeln( "<br />'" + s2 + "' in uppercase is '"
+		+ s2.toUpperCase() + "'</p>" );       
+
+		var letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklm";
+		document.writeln( "<p>Index of 'abc' in '" + letters + "' is " + letters.indexOf("abc") +" </p>");
+		document.writeln( "<p>Last index of 'abc' in '" + letters + "' is " + letters.lastIndexOf("abc") +" </p>");
+		document.writeln( "<p>Substring of '" + letters + "' from index 3 to 7 is " + letters.substring(3, 7) +
+		" <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>");
+		
+		var linkText = "Click here to go to anchorText";
+		document.writeln( "<p>" + linkText.link( "#top" ) + "</p>" );     
+		document.writeln( "<a href='#top'>" + linkText + "</a>" );   
+  
+ 
+	// -->
+	</script>
+</head>
+<body>
+</body>
+</html>	

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>JavaScript Example 1</title>
+
+</head>
+
+<body style="background-color:#FFFFFF; color:#000000">
+	
+<script type="text/javascript">
+	
+<!-- <![CDATA[
+
+
+//You will receive a different greeting based
+//on what day it is. Note that Sunday=0,
+//Monday=1, Tuesday=2, etc.
+
+var d=new Date();
+var theDay=d.getDay();
+
+switch (theDay)
+{
+case 5:
+  document.write("Finally Friday");
+  break;
+case 6:
+  document.write("Super Saturday");
+  break;
+case 0:
+  document.write("Sleepy Sunday");
+  break;
+default:
+  document.write("I'm looking forward to this weekend!");
+}
+
+// ]]> -->
+</script>
+
+
+<script type="text/javascript">
+	
+<!-- <![CDATA[
+
+
+ 
+//You will receive a different greeting based
+//on what day it is. Note that Sunday=0,
+//Monday=1, Tuesday=2, etc.
+var d=new Date();
+var theDay=d.getDay();
+
+
+
+if (theDay == 5) {
+  document.write("Finally Friday!");
+}
+
+
+
+else{
+  if (theDay == 6) {
+     document.write("Supper Saturday!");
+  }
+  else {
+     if (theDay == 0) {
+        document.write("Sleepy Sunday!");
+     }
+     else{
+        document.write("I'm looking forward to this weekend!");
+     }
+  }
+}
+
+
+// ]]> -->
+</script>
+
+
+</body>
+
+</html>
