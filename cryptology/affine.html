@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Function use</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var cipher;
+  var add;
+  var multi;
+  var inv;
+  var ans;
+  cipher = window.prompt("enter CIPHERTEXT: ", "value");
+  var split = cipher.split("");
+  multi = window.prompt("enter multiple key", "value");
+  add = window.prompt("enter additive key", "value");
+   switch(multi){
+		case '1':
+			inv = 1;
+			break;
+		case '3':
+			inv = 9;
+			break;
+		case '5':
+			inv = 21;
+			break;
+		case '7':
+			inv = 15;
+			break;
+		case '9':
+			inv = 3;
+			break;
+		case '11':
+			inv = 19;
+			break;
+		case '15':
+			inv = 7;
+			break;
+		case '17':
+			inv = 23;
+			break;
+		case '19':
+			inv = 11;
+			break;
+		case '21':
+			inv = 5;
+			break;
+		case '23':
+			inv = 17;
+			break;
+		case '25':
+			inv = 25;
+			break;
+	}
+  ans = calculation(split, add, inv);
+  document.writeln("CIPHERTEXT = " + cipher + "\n    plaintext = " + ans);
+  function calculation(split, add, inv){
+		var i;
+		var j;
+		var num;
+		var length = split.length;
+		var str = split.join("");
+		for ( i = 0; i < length; i++){
+			num = str.charCodeAt(i);
+			if (str.charAt(i) != " " && str.charAt(i) != ","){
+				
+				if ( num > 64 && num < 91){
+					num = num - 64;}
+				if ( num > 96 && num < 123){
+					num = num - 96;}
+				
+				//add key
+				if ((num - add) < 0){
+					num = num + 26;}
+				num = num - add;
+				num = (num * inv)%26;
+				document.write(inv + " " + num + " ");
+				num = num + 96;
+				}
+			split[i] = String.fromCharCode(num);
+		}
+		return split;
+     }
+  
+  </script>
+</body>
+</html>

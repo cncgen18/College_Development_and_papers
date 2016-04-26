@@ -1,0 +1,41 @@
+/**
+ * @(#)CalcVolume.java
+ * @Michael Weyman
+ * @version 1.00 2012/2/7
+ */
+import java.util.Scanner;
+public class CalcVolume {
+
+    public static void main(String[] args) {
+    	int radius;
+    	int length;
+    	double PI = 3.14;
+    	/* get length and radius from scanner */
+    	Scanner input = new Scanner(System.in);
+    	System.out.print("enter the radius. ");
+    	radius = input.nextInt();
+    	Scanner input1 = new Scanner(System.in);
+    	System.out.print("enter the length. ");
+    	length = input.nextInt();
+    	double area = radius * radius * PI;
+    	double volume = area * length;
+    	System.out.print("the volume of the cylinder is " + volume);
+    }
+}
+
+
+import javax.swing.JOptionPane;
+public class Gratuity {
+
+    public static void main(String[] args) {
+    	String subtotalString = JOptionPane.showInputDialog("enter the subtotal.");
+    	double subtotal = Double.parseDouble(subtotalString);
+    	String rateString = JOptionPane.showInputDialog("enter the gratuity rate as an integer." );
+    	double rate = Double.parseDouble(rateString);
+    	double per = 1 + (rate / 100.0);
+    	double total = per * subtotal;
+    	System.out.println("your total is " + total);
+
+    }
+
+}
