@@ -1,0 +1,11 @@
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\bin\Debug\WeymanAssignment7.exe.config
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\bin\Debug\WeymanAssignment7.exe
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\bin\Debug\WeymanAssignment7.pdb
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\bin\Debug\WeymanAssignment7.xml
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\obj\Debug\WeymanAssignment7.Form1.resources
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\obj\Debug\WeymanAssignment7.Resources.resources
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\obj\Debug\WeymanAssignment7.vbproj.GenerateResource.Cache
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\obj\Debug\WeymanAssignment7.exe
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\obj\Debug\WeymanAssignment7.xml
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\obj\Debug\WeymanAssignment7.pdb
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment7\WeymanAssignment7\obj\Debug\WeymanAssignment7.SplashScreen1.resources

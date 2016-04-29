@@ -1,0 +1,10 @@
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\bin\Debug\WeymanAssignment6.exe.config
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\bin\Debug\WeymanAssignment6.exe
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\bin\Debug\WeymanAssignment6.pdb
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\bin\Debug\WeymanAssignment6.xml
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\obj\Debug\WeymanAssignment6.Form1.resources
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\obj\Debug\WeymanAssignment6.Resources.resources
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\obj\Debug\WeymanAssignment6.vbproj.GenerateResource.Cache
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\obj\Debug\WeymanAssignment6.exe
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\obj\Debug\WeymanAssignment6.xml
+C:\Users\Michael\Documents\Visual Studio 2012\Projects\WeymanAssignment6\WeymanAssignment6\obj\Debug\WeymanAssignment6.pdb

@@ -1,0 +1,10 @@
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\bin\Debug\WeymanAssignment2.exe.config
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\bin\Debug\WeymanAssignment2.exe
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\bin\Debug\WeymanAssignment2.pdb
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\bin\Debug\WeymanAssignment2.xml
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\obj\Debug\WeymanAssignment2.Form1.resources
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\obj\Debug\WeymanAssignment2.Resources.resources
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\obj\Debug\WeymanAssignment2.vbproj.GenerateResource.Cache
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\obj\Debug\WeymanAssignment2.exe
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\obj\Debug\WeymanAssignment2.xml
+c:\users\michael\documents\visual studio 2012\Projects\WeymanAssignment2\WeymanAssignment2\obj\Debug\WeymanAssignment2.pdb
